@@ -1,0 +1,25 @@
+<html>
+<body style="background-color: aquamarine;">
+    <pid="p"></p>
+    <h1>
+    ENTER GROCERY
+</h1>
+    <input type="text" id="txtname" placeholder="GROCERY">
+    <br>
+    <br>
+    <input type="button" onclick="add_grocery();" value="Submit">
+    <br>
+    <div id="show_task"></div>
+</body>
+</html>
+<script type="text/javascript">
+grocery=[];
+i=0;
+function add_grocery(){
+var single_task=document.getElementById("txtname").value;
+grocery.push(single_task);
+document.getElementById("show_task").innerHTML+=(i)+grocery[i]+"<br>";
+document.getElementById("txtname").value="";
+i++;
+}
+</script>
